@@ -33,4 +33,33 @@ if(new Date().getDate()<16){
 else{
    document.write("last fifteen days of the month")
 }
-document.write("<br><br><br>")
+document.write("<br><br><br>");
+
+
+
+
+// Task 6
+var date = new Date();
+document.write("Current Date: "+date+"<br>");
+document.write("Elapsed milliseconds since January 1, 1970: "+date.getTime()+"<br>")
+document.write("Elapsed minutes since January 1, 1970: "+((date.getTime()/1000)/60/60)+"<br>")
+document.write("<br><br><br>");
+
+
+
+
+// Task 7
+if(new Date().getHours()<12){
+   document.write("Its AM")
+}
+else{
+   document.write("Its PM")
+}
+document.write("<br><br><br>");
+
+
+
+
+// Task 8
+var laterDate = new Date("Dec 31, 2020");
+document.write(laterDate+"<br>")
