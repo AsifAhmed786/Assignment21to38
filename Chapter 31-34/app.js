@@ -99,3 +99,39 @@ document.write("<br><br><br>");
 
 
 // Task 12
+var date1 = new Date();
+alert("current date: "+date1);
+date1.setFullYear(date1.getFullYear()-100)
+alert("100 years back it was "+date1);
+
+
+
+// Task 13
+var age = +prompt("Enter your age")
+var date1 = new Date();
+var year = date1.getFullYear()-age
+document.write("Your age is "+age+"<br>")
+document.write("Your birth year is "+year)
+document.write("<br><br><br>");
+
+
+
+// Task 14
+var customerName = "Asif";
+var currentMonth = "June";
+var units = 410;
+var pu = 16;
+var surcharge = 350;
+var netAmount = pu * units;
+var grossAmount = netAmount + surcharge;
+
+document.write("<h1>Kelectric Bill</h1>");
+document.write("<br>");
+document.write("<p>Month: "+currentMonth+"</p>");
+document.write("<p>Number of Units: "+units+"</p>");
+document.write("<p>Charges per unit: "+pu+"</p>");
+document.write("<br>");
+document.write("<p>Net Amount Payable (within Due Date): "+netAmount+"</p>");
+document.write("<p>Late payment surcharge: "+surcharge+"</p>");
+document.write("<p>Gross Amount Payable (after Due Date): "+grossAmount+"");
+
