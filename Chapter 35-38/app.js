@@ -1,137 +1,145 @@
 // Task 1
-var a = new Date();
-document.write(a)
+function abc(){
+   document.write(new Date())
+   
+}
+abc();
 document.write("<br><br><br>")
 
 
-// Task 2
-var month = ["January","February","March","April","May","June","July","August","September","October","November","December"]
-alert("Current month: "+month[a.getMonth()]);
 
+// Task 2
+function userName(fname, lname){
+   alert("Welcom Mr. "+fname+" "+lname)
+}
+userName("Asif","Ahmed")
 
 
 // Task 3
-var day = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-alert("Today is: "+day[a.getDay()].slice(0,3));
+var num1 = +prompt("Please enter first number for sum")
+var num2 = +prompt("Please enter first number for sum")
+function sum1(num1a,num2a){
+   alert("Sum of two numbers is "+(num1a+num2a))
+}
+sum1(num1,num2);
 
 
 
 // Task 4
-if(new Date().getDay()===0 ||  new Date().getDay()===6){
-   alert("Its a Fun day")
+function calc(num1a,num2a,operator1)
+{
+   var result = 0;
+   if(operator1==="+"){
+      result = num1a+num2a;
+   }
+   else if(operator1==="-"){
+      result = num1a-num2a;
+   }
+   else if(operator1==="*"){
+      result = num1a*num2a;
+      
+   }
+   return result;   
 }
-else{
-
-}
+var num1 = +prompt("Please enter first number for calculations");
+var ope = prompt("Please enter operator + - *");
+var num2 = +prompt("Please enter second number for calculations");
+alert(calc(num1,num2,ope));
 
 
 
 // Task 5
-if(new Date().getDate()<16){
-   document.write("First fifteen days of the month")
+function sqrr(num1a){
+   return Math.sqrt(num1a);
 }
-else{
-   document.write("last fifteen days of the month")
-}
-document.write("<br><br><br>");
-
+alert(sqrr(+prompt("Please enter number for square")))
 
 
 
 // Task 6
-var date = new Date();
-document.write("Current Date: "+date+"<br>");
-document.write("Elapsed milliseconds since January 1, 1970: "+date.getTime()+"<br>")
-document.write("Elapsed minutes since January 1, 1970: "+((date.getTime()/1000)/60/60)+"<br>")
-document.write("<br><br><br>");
+function factorial1(num1a){
+   var result = 1;
+   for(var i = 0; i < num1a;i ++){
+      result = result*(i+1) ;
 
+   }
+   return result;
+}
+alert(factorial1(+prompt("Please enter number for factorial")))
 
 
 
 // Task 7
-if(new Date().getHours()<12){
-   document.write("Its AM")
+function printCount(startN, endN){
+   for(var i = startN; i <= endN; i++){
+      document.write(i+"<br>")
+   }
 }
-else{
-   document.write("Its PM")
-}
-document.write("<br><br><br>");
+printCount(5,10)
+document.write("<br><br><br>")
 
 
-
-
-// Task 8
-var laterDate = new Date("Dec 31, 2020");
-document.write(laterDate+"<br>")
-document.write("<br><br><br>");
 
 
 // Task 9
-var date1 = new Date("April, 25 2020");
-date1m = date1.getTime();
-
-var currentDate = new Date();
-datecm = currentDate.getTime();
-
-var differnece = (datecm-date1m)/1000 /60/60/24;
-document.write(Math.round(differnece)+" days have passed since 1st Ramadan, 2020");
-document.write("<br><br><br>");
-
+function areaR(width1=5,height1=3){
+   var rect = width1*height1;
+   return rect;
+}
+alert(areaR())
+alert(areaR(3,2))
 
 
 
 // Task 10
-var refDate = new Date("December, 05 2015");
-var endDate = new Date("January, 1 2015");
-var sec = (refDate.getTime()-endDate.getTime())/1000/60
-document.write("On reference date "+refDate+",<br>");
-document.write(sec+" secondshad passed since the begining of 2015")
-document.write("<br><br><br>");
+function palind(word){
+   word1 = ""
+   for(var i =(word.length-1); i >=0; i--){
+      word1+=word[i]
+   }
+   if(word1===word){
+      alert("the word is palindrome")
+   }
+   else{
+      alert("the word is not palindrome")
+   }
+   alert(word1)
+}
+palind("madam")
 
 
 
 // Task 11
-var date1 = new Date();
-document.write("current date: "+date1+"<br>");
-date1.setHours(date1.getHours()+1)
-document.write("1 hour ago, it was "+date1);
-document.write("<br><br><br>");
+function title(string) {
+   var text1 = string.toLowerCase().split(" ");
+   for(var i = 0; i < text1.length; i++){
+      text1[i] = text1[i][0].toUpperCase() + text1[i].slice(1);
+   }
+return text1;
+}
+var x = "the quick brown fox"
+var titleString = new String(title(x));
+titleString = titleString.replace(/,/g," ");
+document.write("User input: "+x+"<br>")
+document.write("Title case: "+titleString+"")
+document.write("<br><br><br>")
+
 
 
 // Task 12
-var date1 = new Date();
-alert("current date: "+date1);
-date1.setFullYear(date1.getFullYear()-100)
-alert("100 years back it was "+date1);
-
-
-
-// Task 13
-var age = +prompt("Enter your age")
-var date1 = new Date();
-var year = date1.getFullYear()-age
-document.write("Your age is "+age+"<br>")
-document.write("Your birth year is "+year)
-document.write("<br><br><br>");
-
-
-
-// Task 14
-var customerName = "Asif";
-var currentMonth = "June";
-var units = 410;
-var pu = 16;
-var surcharge = 350;
-var netAmount = pu * units;
-var grossAmount = netAmount + surcharge;
-
-document.write("<h1>Kelectric Bill</h1>");
-document.write("<br>");
-document.write("<p>Month: "+currentMonth+"</p>");
-document.write("<p>Number of Units: "+units+"</p>");
-document.write("<p>Charges per unit: "+pu+"</p>");
-document.write("<br>");
-document.write("<p>Net Amount Payable (within Due Date): "+netAmount+"</p>");
-document.write("<p>Late payment surcharge: "+surcharge+"</p>");
-document.write("<p>Gross Amount Payable (after Due Date): "+grossAmount+"");
-
+var str = "Web Development Tutorial"
+var arr1 = str.split(" ")
+var length1 = 0;
+var word = ""
+for(var i = 0;i<arr1.length;i++){
+   if(arr1[i].length>length1){
+      length1 = arr1[i].length;
+      word = arr1[i];
+   }
+   else{
+      continue;
+   }
+}
+document.write("EXAMPLE STRING: "+str+"<br>")
+document.write("EXPECTED OUTPUT: "+word)
+document.write("<br><br><br>")
